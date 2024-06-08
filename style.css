@@ -1,0 +1,191 @@
+/*Barra de navegación*/
+.navbar{
+  padding: 2rem;
+  background-color: #3AA6B9;
+  
+}
+
+.navbar-collapse{
+  align-items: center;
+  justify-content: space-between;
+   
+}
+
+/* Estilos generales */
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+h1{
+  font-size: 4rem;
+  
+    font-family: "Rubik Distressed", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.seccion-oscura{
+  color: white;
+  background-color: #1b1b32;
+}
+
+.seccion-footer{
+  color: white;
+  background-color: #3AA6B9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seccion-titulo{
+  font-size: 4rem;
+  padding: 15px 0;
+  font-family: 'Rubik Distressed', cursive;
+}
+
+.seccion-texto{
+  font-size: 1.2rem;
+}
+
+/* Seccion hero */
+.hero{
+  background-color: #ffe9e9;
+  min-height: 600px;
+  text-align: center;
+
+}
+
+
+/* Sobre mi */
+.experiencia{
+  height: 500px;
+  padding: 10px;
+
+}
+
+.experiencia .contenedor{
+  /* max-width: 600px; */
+  text-align: center;
+}
+
+.hero-principal{
+  padding: 3rem;
+}
+
+.hero-imagen{
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.hero-principal h2 {
+  font-size: 1.5rem;
+  color: #666565;
+}
+
+.contacto{
+  text-align: center;
+  padding: 10px;
+
+}
+
+i{
+  font-size: 50px;
+}
+
+
+/* Boton flotante */
+.go-top-container{
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  width: 6.6rem;
+  height: 6.6rem;
+  z-index: -1;
+}
+
+.go-top-button{
+  width: 0rem;
+  height:0rem;
+  background: #FF9EAA;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.go-top-button i{
+  position: absolute;
+  font-size: 1.7rem;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: #ffffff;
+  transition: .2s;
+}
+
+.show{
+  z-index: 10;
+}
+
+.show .go-top-button{
+  animation: popup .3s ease-in-out;
+  width: 4rem;
+  height: 4rem;
+  z-index: 11;
+}
+
+.show i{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup{
+  0%{
+    width: 0rem;
+    height: 0rem;
+  }
+  50%{
+    width: 6rem;
+    height: 6rem;
+  }
+  100%{
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+
+
+
+
+/*Adaptable Responsive*/
+@media screen and (max-width:767px){
+  .navbar-brand{
+    display: none;
+  }
+}
+
+@media screen and (max-width:857px){
+  .hero{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:857px){
+  .experiencia {
+    height: auto;
+  }
+}
+
+@media screen and (max-width:857px){
+  .sobre-mi .contenedor{
+    padding-top: 65px;
+  }
+}
